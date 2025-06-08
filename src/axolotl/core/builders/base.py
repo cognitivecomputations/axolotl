@@ -262,6 +262,13 @@ class TrainerBuilderBase(abc.ABC):
 
                 optimizer_cls = MuonOptimizerFactory
                 optimizer_kwargs.update(adam_kwargs)
+
+            elif self.cfg.optimizer == "dolphinflow":
+                from dolphinflow import DolphinFlow
+                optimizer_cls = DolphinFlow
+            elif self.cfg.optimizer == "dolphinflow_8bit":
+                from dolphinflow import DolphinFlow8bit
+                optimizer_cls = DolphinFlow8bit
             elif self.cfg.optimizer == "optimi_adamw":
                 from optimi import AdamW
 

@@ -75,6 +75,8 @@ class CustomSupportedOptimizers(str, Enum):
     adopt_adamw = "adopt_adamw"  # pylint: disable=invalid-name
     came_pytorch = "came_pytorch"  # pylint: disable=invalid-name
     muon = "muon"  # pylint: disable=invalid-name
+    dolphinflow = "dolphinflow"
+    dolphinflow_8bit = "dolphinflow_8bit"
 
 
 class RingAttnFunc(str, Enum):
